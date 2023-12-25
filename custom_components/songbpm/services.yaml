@@ -1,0 +1,11 @@
+# Describes the format for available services for bibliotheek_be
+
+get_song_bpm:
+  description: >
+    Get the BPM of a song
+  fields:
+    song:
+      description: >
+        The path to the song file
+      example: test.mp3
+      
