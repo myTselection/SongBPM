@@ -7,7 +7,7 @@
 [![GitHub commit activity](https://img.shields.io/github/commit-activity/m/myTselection/SongBPM.svg)](https://github.com/myTselection/SongBPM/graphs/commit-activity)
 
 # SongBPM - Home Assistant integration
-[SongBPM](https://www.jnm.be/) Home Assistant custom component integration. SongBPM will try to find the BPM of a song..
+[SongBPM](https://www.songbpm.com/) Home Assistant custom component integration. SongBPM will try to find the BPM of a song..
 
 This integration is in no way affiliated with SongBPM.
 
