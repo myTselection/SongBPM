@@ -35,12 +35,12 @@ def create_schema(entry, option=False):
         default_password = ""
 
     data_schema = OrderedDict()
-    data_schema[
-        vol.Required(CONF_USERNAME, default=default_username, description="username")
-    ] = str
-    data_schema[
-        vol.Required(CONF_PASSWORD, default=default_password, description="password")
-    ] = str
+    # data_schema[
+    #     vol.Required(CONF_USERNAME, default=default_username, description="username")
+    # ] = str
+    # data_schema[
+    #     vol.Required(CONF_PASSWORD, default=default_password, description="password")
+    # ] = str
 
     return data_schema
 
@@ -61,11 +61,11 @@ class ComponentFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
     async def async_step_user(self, user_input=None):  # pylint: disable=dangerous-default-value
         """Handle a flow initialized by the user."""
 
-        # if user_input is not None:
-            # return self.async_create_entry(title=NAME, data=user_input)
-        return self.async_create_entry(title=NAME, data=user_input)
+        if user_input is not None:
+            return self.async_create_entry(title=NAME, data=user_input)
+        # return self.async_create_entry(title=NAME, data=user_input)
 
-        # return await self._show_config_form(user_input)
+        return await self._show_config_form(user_input)
 
     async def _show_config_form(self, user_input):
         """Show the configuration form to edit location data."""

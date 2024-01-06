@@ -45,7 +45,7 @@
             "fields": {
                 "song": {
                     "name": "song",
-                    "description": "The path to the song file"
+                    "description": "Name and artist of the song"
                 }
             }
 

@@ -6,8 +6,8 @@
   "dependencies": [],
   "documentation": "https://github.com/myTselection/SongBPM",
   "integration_type": "hub",
-  "iot_class": "local_polling",
+  "iot_class": "cloud_polling",
   "issue_tracker": "https://github.com/myTselection/SongBPM/issues",
-  "requirements": ["librosa==0.10.1"],
+  "requirements": ["matplotlib","wave","aubio","numpy","scipy","matplotlib"],
   "version": "0.0.1"
 }

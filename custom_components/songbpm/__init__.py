@@ -17,8 +17,8 @@ from .utils import *
 # NAME = manifest_data.get("name")
 # VERSION = manifest_data.get("version")
 # ISSUEURL = manifest_data.get("issue_tracker")
-DOMAIN = "jnm"
-NAME = "JNM"
+DOMAIN = "songbpm"
+NAME = "SongBPM"
 
 PLATFORMS = [Platform.SENSOR]
 
@@ -96,3 +96,11 @@ def register_services(hass, config_entry):
         
         config = config_entry.data
         _LOGGER.debug(f"{NAME} handle_get_song_bpm song: {song}")
+        
+        session = ComponentSession()
+        songdetails = await hass.async_add_executor_job(lambda: session.getSongBpm(song))
+        assert songdetails is not None
+        _LOGGER.debug(f"{NAME} songdetails: {songdetails}")
+
+    hass.services.async_register(DOMAIN, 'get_song_bpm', handle_get_song_bpm)
+    _LOGGER.info(f"async_register services done")

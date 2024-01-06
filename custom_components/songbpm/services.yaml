@@ -6,6 +6,6 @@ get_song_bpm:
   fields:
     song:
       description: >
-        The path to the song file
-      example: test.mp3
+        Name and artist of the song
+      example: Eminem Loose yourself
       
